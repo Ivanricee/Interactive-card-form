@@ -42,8 +42,7 @@ describe('Cards', () => {
     await waitFor(() => {
       screen.getByText(`${registerFormMock.name}`)
       screen.getByText(`${registerFormMock.number}`)
-      screen.getByText(`${registerFormMock.month}`)
-      screen.getByText(`${registerFormMock.year}`)
+      screen.getByText(`${registerFormMock.month}/${registerFormMock.year}`)
       screen.getByText(`${registerFormMock.cvc}`)
     })
   })
