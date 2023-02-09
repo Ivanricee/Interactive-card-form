@@ -1,9 +1,11 @@
-:root{
-  background-color: rebeccapurple;
-}
 body{
   margin: 0;
 }
 main{
-  background-color: seagreen
+  background-color: var(--white);
+  display: grid;
+  grid-template-areas: "cards"
+                       "form";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 }
