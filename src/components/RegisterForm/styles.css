@@ -1,0 +1,122 @@
+.register-form {
+  grid-area: form;
+  margin-block-start: 5.7rem;
+  padding: 0 1.4rem;
+}
+.register-form label {
+  color: var(--very-dark-violet);
+  margin-block-end: .4rem;
+}
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  font-size: .7rem;
+  letter-spacing: .065rem;
+}
+
+
+
+
+
+
+
+.register-form form input{
+  font-size: 0.97rem;
+  padding: 0.52rem 0.8rem;
+  color: var(--very-dark-violet);
+  border-radius: 0.4rem;
+  border-style: solid;
+  margin-block-end: 1.15rem;
+}
+.register-form form input::placeholder {
+  color: var(--dark-grayish-violet);
+}
+.register-form form input:focus {
+  position: relative;
+}
+.register-form form input:focus::before {
+  content: "";
+    position: absolute;
+    inset: 0;
+  padding: 10px;
+  outline: none;
+  border-radius: 0.4rem;
+  border: 2px solid transparent;
+  background: linear-gradient(to right, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 100%) border-box;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.register-form form button {
+  margin-block-start: .45rem;
+  font-size: 1rem;
+  letter-spacing: .06rem;
+  padding: .7rem 0;
+  border-style: none;
+  border-radius: .35rem;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+  border: none;
+  outline: none;
+  position: relative;
+  block-size: 3rem;
+}
+.register-form form button:active {
+  background:var(--active);
+}
+.register-form form button:active::before {
+  content: "Confirm";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: .2rem;
+  background-color: var(--very-dark-violet);
+}
+
+
+
+
+.register-form-inline {
+  display: flex;
+  gap: .5rem;
+  position: relative;
+}
+
+.register-form-date {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.register-form-date label {
+  margin:0;
+}
+
+.register-form-date input {
+  flex: 1;
+  box-sizing: border-box;
+  display: block;
+  min-width: 0;
+  max-width: 7.2rem;
+}
+
+.register-form-cvc {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+
+
+.register-form-cvc input {
+  box-sizing: border-box;
+  max-inline-size: 9rem;
+  display: block;
+  min-width: 0;
+}
