@@ -18,7 +18,7 @@ export function Cards() {
   return (
     <section className="card">
       <picture>
-        <source srcset="/bg-main-desktop.png" media="(min-width: 376px)" />
+        <source srcSet="/bg-main-desktop.png" media="(min-width: 376px)" />
         <img src="/bg-main-mobile.png" alt="background cards" />
       </picture>
       <div className="card__front">
