@@ -1,5 +1,15 @@
 import { createContext, useContext, useState } from 'react'
 
+const formatNumber = (name, number) => {
+  let formattedNumber = number
+  if (name === 'number') {
+    const trimNumber = number.replace(/\s/g, '')
+    const arrEveryFour = trimNumber.match(/.{1,4}/g) || []
+    formattedNumber = arrEveryFour.join(' ')
+  }
+  return formattedNumber
+}
+
 export const FormContext = createContext(null)
 export function FormContextProvider({ children }) {
   const [formData, setFormData] = useState({
@@ -11,8 +21,12 @@ export function FormContextProvider({ children }) {
   })
 
   const onChange = (e) => {
-    const valueInput = e.target.value
+    let valueInput = e.target.value
     const nameInput = e.target.name
+    if (e.nativeEvent.data === ' ' && nameInput === 'number') return
+
+    valueInput = formatNumber(nameInput, valueInput)
+
     const updatedFormData = { ...formData, [nameInput]: valueInput }
     setFormData(updatedFormData)
   }
