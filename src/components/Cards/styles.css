@@ -1,8 +1,16 @@
 .card{
   grid-area: cards;
+  position: relative;
+  inline-size: 100%;
+  min-inline-size: 375px;
+}
+.card-background{
   block-size: 13rem;
-  overflow-x: auto;
+  overflow: hidden;
   background: var(--very-dark-violet);
+}
+.card-background img{
+  inline-size: 100%;
 }
 
 .card__front{
@@ -20,6 +28,7 @@
 .card__front-logo{
   position: absolute;
   padding: 1.3rem;
+  inset-inline-start: 0;
   z-index: 3;
 }
 .card__front-img{
@@ -41,8 +50,10 @@
   margin-block-end: .2rem;
   letter-spacing: .12rem;
   inline-size: 100%;
+
 }
 .card__front-text p:not(:first-child){
+  text-align: left;
   font-size: .55rem;
   letter-spacing: .06rem;
   flex-grow: 1;
