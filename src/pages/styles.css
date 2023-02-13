@@ -3,9 +3,14 @@ body{
 }
 main{
   background-color: var(--white);
+  max-inline-size: 375px;
   display: grid;
   grid-template-areas: "cards"
                        "form";
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
+  justify-items: center;
+}
+@media screen and (min-width: 648px){
+
 }
