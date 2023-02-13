@@ -4,11 +4,12 @@
   padding: 0 1.4rem;
   display: flex;
   justify-content: center;
-
+  max-inline-size: 324px;
 }
 .register-form label {
   color: var(--very-dark-violet);
   margin-block-end: .4rem;
+  text-align: left;
 }
 .register-form form {
   display: flex;
@@ -21,7 +22,9 @@
   position: relative;
   inset-block-start: -1.3rem;
   margin-block-end: .1rem;
-  color: var(--red)
+  color: var(--red);
+  text-align: left;
+
 }
 .register-form-inline .register-form-date p,
 .register-form-inline .register-form-cvc p {
