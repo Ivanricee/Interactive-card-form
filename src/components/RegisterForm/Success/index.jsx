@@ -6,6 +6,8 @@ export function Success() {
     <section>
       <Complete className="register-form--success" />
       <h1>THANK YOU!</h1>
+      <p>We've added your card details</p>
+      <button type="submit">Confirm</button>
     </section>
   )
 }

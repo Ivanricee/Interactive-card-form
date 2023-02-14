@@ -1,3 +1,22 @@
 section{
   text-align: center;
 }
+section button{
+  margin-block-start: .45rem;
+  font-size: 1rem;
+  letter-spacing: .06rem;
+  padding: .7rem 0;
+  border-style: none;
+  border-radius: .35rem;
+  color: var(--white);
+  background-color: var(--very-dark-violet);
+  border: none;
+  outline: none;
+  position: relative;
+  block-size: 3rem;
+  inline-size: 13rem;
+}
+section button p{
+  color: var(--dark-grayish-violet);
+
+}
