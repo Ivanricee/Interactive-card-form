@@ -8,9 +8,32 @@ main{
   grid-template-areas: "cards"
                        "form";
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
+  grid-template-columns: 375px 1fr;
   justify-items: center;
 }
-@media screen and (min-width: 648px){
+@media screen and (min-width: 751px){
+  main{
+    grid-template-areas:"cards form";
+    block-size: 100vh;
+    max-inline-size: initial;
+    justify-items: left;
+  }
+}
 
+@media screen and (min-width: 1440px) {
+  /*add frame just like mobile version*/
+  main{
+    inline-size: 1280px;
+    block-size: 720px;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0px 1px 19px 1px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0px 1px 19px 1px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 1px 19px 1px rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-height: 388px){
+  main {
+    block-size: 108vh;
+  }
 }
