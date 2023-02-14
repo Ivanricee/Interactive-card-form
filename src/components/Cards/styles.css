@@ -1,7 +1,7 @@
 .card{
   grid-area: cards;
   position: relative;
-  inline-size: 100%;
+  inline-size: 100vw;
   min-inline-size: 375px;
 }
 .card-background{
@@ -17,7 +17,7 @@
   box-sizing: border-box;
   position: absolute;
   inset-block-start: 7.2rem;
-  inset-inline-start: 1rem;
+  inset-inline-start: calc(50% - 9.3rem);
   inline-size: 16rem;
   block-size: 8.8rem;
   overflow: hidden;
@@ -71,7 +71,7 @@
   color: var(--white);
   border-radius: .5rem;
   inset-block-start: 2.3rem;
-  inset-inline-start: 3.8rem;
+  inset-inline-start: calc(50% - 6.8rem);
 }
 .card__back-img{
   position: absolute;
@@ -84,4 +84,36 @@
   inset-block-start: 3.3rem;
   inset-inline-start: 13.1rem;
   letter-spacing: .06rem;
+}
+
+@media screen and (min-width: 751px){
+  .card-background{
+    overflow: initial;
+    block-size: 100%;
+  }
+  .card-background img{
+    display: none;
+  }
+  .card {
+    min-inline-size: initial;
+    max-inline-size: 375px;
+  }
+  .card__front{
+    inset-inline-start: 2.41rem;
+    inset-block-start: calc(50% - 8.5rem);
+  }
+  .card__back{
+    inset-block-start: 17.8rem;
+    inset-inline-start: 5.8rem;
+    inset-block-start: calc(50% + 2rem);
+  }
+}
+@media screen and ( min-width: 900px ){
+  .card__front {
+      inset-inline-start: 11.5vw;
+  }
+
+  .card__back {
+    inset-inline-start: 16vw;
+  }
 }

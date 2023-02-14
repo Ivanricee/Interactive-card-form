@@ -18,3 +18,15 @@ html{
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 751px) {
+  #app {
+    display:initial;
+  }
+}
+@media screen and (min-width: 1441px){
+  #app {
+    display: flex;
+    block-size: 100vh;
+    justify-content: center;
+  }
+}

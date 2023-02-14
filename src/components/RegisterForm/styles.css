@@ -4,7 +4,7 @@
   padding: 0 1.4rem;
   display: flex;
   justify-content: center;
-  max-inline-size: 324px;
+
 }
 .register-form label {
   color: var(--very-dark-violet);
@@ -16,6 +16,7 @@
   flex-direction: column;
   font-size: .7rem;
   letter-spacing: .065rem;
+  max-inline-size: 324px;
 }
 
 .register-form form p{
@@ -30,7 +31,6 @@
 .register-form-inline .register-form-cvc p {
   inset-block-start: -1.7rem;
 }
-
 
 
 .register-form form input{
@@ -93,8 +93,6 @@
 }
 
 
-
-
 .register-form-inline {
   display: flex;
   gap: .5rem;
@@ -126,4 +124,28 @@
   max-inline-size: 9rem;
   display: block;
   min-width: 0;
+}
+
+@media screen and ( min-width: 751px ){
+  .register-form{
+    box-sizing: border-box;
+    margin-block-start: initial;
+    inline-size: 100%;
+    align-items: center;
+  }
+  .register-form form {
+      font-size: 0.65rem;
+    }
+  .register-form form input {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.3rem;
+  }
+
+  .register-form form button{
+    font-size: .9rem;
+    block-size: 2.5rem;
+    margin-block-start: initial;
+    align-items: center;
+  }
 }
