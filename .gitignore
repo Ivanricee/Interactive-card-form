@@ -83,3 +83,4 @@ src/server/public
 
 # lint staged
 .lintstagedrc
+.vercel
