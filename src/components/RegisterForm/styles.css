@@ -30,6 +30,7 @@
 .register-form-inline .register-form-date p,
 .register-form-inline .register-form-cvc p {
   inset-block-start: -1.7rem;
+  inline-size: 100%;
 }
 
 
@@ -37,11 +38,23 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.97rem;
   padding: 0.5rem 0.8rem;
-  color: var(--very-dark-violet);
   border-radius: 0.4rem;
-  border-style: solid;
   margin-block-end: 1.15rem;
+  color: var(--very-dark-violet);
+  border-style: solid;
 }
+.input{
+  border: 2px solid var(--light-grayish-violet)
+}
+.input-error{
+  border: 2px solid var(--red);
+}
+.register-form form input:focus{
+  outline: 0;
+  border: 2.5px solid var(--very-dark-violet);
+}
+
+
 .register-form form input::placeholder {
   color: var(--dark-grayish-violet);
 }
@@ -74,6 +87,8 @@
   outline: none;
   position: relative;
   block-size: 3rem;
+  inline-size: 100%;
+  cursor: pointer;
 }
 .register-form form button:active {
   background:var(--active);
