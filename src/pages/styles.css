@@ -20,7 +20,7 @@ main{
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
   /*add frame just like mobile version*/
   main{
     inline-size: 1280px;
