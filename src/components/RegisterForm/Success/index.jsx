@@ -4,10 +4,11 @@ import './styles.css'
 import { useFormValuesContext } from '../../../context/FormContext'
 
 export function Success() {
-  const [_, { setSuccessForm }] = useFormValuesContext()
+  const [_, { setSuccessForm, setFormData }] = useFormValuesContext()
 
   const handleClick = () => {
     setSuccessForm(false)
+    setFormData({ name: '', number: '', month: '', year: '', cvc: '' })
   }
   return (
     <section>
