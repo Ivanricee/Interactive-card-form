@@ -2,11 +2,11 @@ import React, { useRef } from 'react'
 import front from '/bg-card-front.png'
 import back from '/bg-card-back.png'
 import './styles.css'
-import { useFormContext } from '../../context/FormContext'
+import { useFormValuesContext } from '../../context/FormContext'
 import { CardLogo } from '../Icon'
 
 export function Cards() {
-  const [state] = useFormContext()
+  const [state] = useFormValuesContext()
   const { formData } = state
   const initData = useRef({
     name: 'JANE APPLESEED',
