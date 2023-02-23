@@ -3,7 +3,11 @@ import { useFormContext } from 'react-hook-form'
 
 const formValidationMessage = (errors, errorKeys) => {
   const errorMsg = errorKeys.map((errorKey) => {
-    return <span>{errors[errorKey] ? errors[errorKey].message : ''}</span>
+    return (
+      <span key={errorKey}>
+        {errors[errorKey] ? errors[errorKey].message : ''}
+      </span>
+    )
   })
   return errorMsg
 }
