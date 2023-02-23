@@ -27,6 +27,9 @@
   text-align: left;
 
 }
+.register-form form p span{
+  display: block;
+}
 .register-form-inline .register-form-date p,
 .register-form-inline .register-form-cvc p {
   inset-block-start: -1.7rem;

@@ -12,14 +12,14 @@ export const RegisterFormSchema = yup.object({
     .matches(/^[\d\s]+$/, 'Wrong format, numbers only'),
   month: yup
     .string()
-    .required("Can't be blank")
-    .min(2, 'Wrong date')
-    .matches(/^(0?[1-9]|1[012])$/, 'Wrong format'),
+    .required("Month can't be blank")
+    .min(2, 'Wrong month length')
+    .matches(/^(0?[1-9]|1[012])$/, 'Wrong month format'),
   year: yup
     .string()
-    .required("Can't be blank")
-    .min(2, 'Wrong date')
-    .matches(/^[0-9]{2}$/, 'Wrong format'),
+    .required("Year can't be blank")
+    .min(2, 'Wrong year length')
+    .matches(/^[0-9]{2}$/, 'Wrong year format'),
   cvc: yup
     .string()
     .required("Can't be blank")
