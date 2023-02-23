@@ -10,5 +10,7 @@ export const registerFormError = {
 }
 export const registerFormMessageError = {
   empty: "Can't be blank",
+  month: "Month can't be blank",
+  year: "Year can't be blank",
   number: 'Wrong format, numbers only',
 }

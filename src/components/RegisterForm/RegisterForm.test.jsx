@@ -50,7 +50,13 @@ describe('Card form', () => {
     await fireEvent.submit(submit)
     await waitFor(() => {
       const empty = screen.getAllByText(`${registerFormMessageError.empty}`)
-      expect(empty).toHaveLength(3)
+      let month = screen.getAllByText(`${registerFormMessageError.month}`)
+      let year = screen.getAllByText(`${registerFormMessageError.year}`)
+
+      expect(empty).toHaveLength(2)
+      expect(month).toHaveLength(1)
+      expect(year).toHaveLength(1)
+
       screen.getByText(`${registerFormMessageError.number}`)
     })
   })
